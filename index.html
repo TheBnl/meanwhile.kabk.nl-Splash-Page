@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KABK | Meanwhile</title>
+  <link href="stylesheets/app.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width">
+
+  <meta property="description" content="De beschrijving van het evenement" />
+  <meta name="author" content="KABK Graphic Design 2015">
+  <meta property="og:description" content="De beschrijving van het evenement" />
+  <meta property="og:title" content="Meanwhile" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://meanwhile.kabk.nl/" />
+  <meta property="og:image" content="http://meanwhile.kabk.nl/fb.jpg" />
+  <meta property="og:video" content="http://vimeo.com/meanwhilevideoid" />
+
+  <script type="text/javascript" src="javascript/modernizr.js"></script>
+</head>
+<body>
+
+<main>
+  <h1>Meanwhile</h1>
+  <button href="#playVideo" title="Play the croudfunding video" class="play" onclick="javascript:playVideo()"></button>
+  <button href="#moreInformation" title="Information about the exhibition" class="info" onclick="javascript:moreInformation()"></button>
+  <article class="information">
+    <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+  </article>
+</main>
+
+<div id="video">
+  <button class="close" onclick="javascript:stopVideo()"></button> 
+  <div class="player">
+  <iframe id="videoplayer" src="https://player.vimeo.com/video/47656204?api=1&amp;player_id=videoplayer&amp;autoplay=0&amp;color=FDDE2E&amp;title=0&amp;byline=0&amp;portrait=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+<script type="text/javascript" src="javascript/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/three.js/three.min.js"></script>
+<script type="text/javascript" src="javascript/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="javascript/froogaloop.min.js"></script>
+<script type="text/javascript" src="javascript/app.js"></script>
+</body>
+</html>

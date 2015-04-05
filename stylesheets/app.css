@@ -1,0 +1,234 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,800");
+/* line 5, ../../../.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 13, ../sass/app.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #FDDE2E;
+  color: #111111;
+}
+
+/* line 23, ../sass/app.scss */
+body {
+  background-color: #FDDE2E;
+  color: #111111;
+}
+
+/* line 29, ../sass/app.scss */
+html canvas {
+  display: none;
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 39, ../sass/app.scss */
+html.webgl canvas {
+  display: block;
+}
+
+/* line 45, ../sass/app.scss */
+main {
+  z-index: 100;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: auto;
+  -webkit-transition: max-height ease-in-out .75s;
+  transition: max-height ease-in-out .75s;
+}
+/* line 57, ../sass/app.scss */
+main h1 {
+  font-size: 42px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+@media screen and (min-device-width: 600px) {
+  /* line 57, ../sass/app.scss */
+  main h1 {
+    font-size: 60px;
+  }
+}
+/* line 67, ../sass/app.scss */
+main button {
+  display: inline-block;
+  margin: 12px 6px;
+}
+/* line 71, ../sass/app.scss */
+main article {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+/* line 77, ../sass/app.scss */
+main article p {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: sans-serif;
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+/* line 87, ../sass/app.scss */
+#video {
+  z-index: 150;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 95, ../sass/app.scss */
+#video button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 12px;
+}
+/* line 101, ../sass/app.scss */
+#video .player {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 108, ../sass/app.scss */
+#video .player iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* line 115, ../sass/app.scss */
+button {
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  outline: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-size: 160px 80px;
+  background-image: url("../images/buttonssprite.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* line 115, ../sass/app.scss */
+  button {
+    background-image: url("../images/buttonssprite@2x.png");
+  }
+}
+/* line 128, ../sass/app.scss */
+button.play {
+  background-position: 0px 0px;
+}
+/* line 130, ../sass/app.scss */
+button.play:hover, button.play:active {
+  background-position: 0px 40px;
+}
+/* line 134, ../sass/app.scss */
+button.info {
+  background-position: 120px 0px;
+}
+/* line 136, ../sass/app.scss */
+button.info:hover, button.info:active {
+  background-position: 120px 40px;
+}
+/* line 140, ../sass/app.scss */
+button.info.active {
+  background-position: 80px 0px;
+}
+/* line 142, ../sass/app.scss */
+button.info.active:hover, button.info.active:active {
+  background-position: 80px 40px;
+}
+/* line 146, ../sass/app.scss */
+button.close {
+  background-position: 40px 0px;
+}
+/* line 148, ../sass/app.scss */
+button.close:hover, button.close:active {
+  background-position: 40px 40px;
+}

@@ -1,0 +1,152 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,800");
+
+$sans: 'Open Sans', sans-serif;
+$yellow: #FDDE2E;
+$black: #111111;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: $yellow;
+  color: $black;
+}
+
+body {
+  background-color: $yellow;
+  color: $black;
+}
+
+html {
+  canvas {
+    display: none;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &.webgl {
+    canvas {
+      display: block;
+    }
+  }
+}
+
+main {
+  z-index: 100;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: auto;
+  -webkit-transition: max-height ease-in-out .75s;
+  transition: max-height ease-in-out .75s;
+  h1 {
+    font-size: 42px;
+    font-family: $sans;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @media screen and (min-device-width: 600px) {
+      font-size: 60px;
+    }
+  }
+  button {
+    display: inline-block;
+    margin: 12px 6px;
+  }
+  article {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      font-family: sans-serif;
+      margin-top: 30px;
+      font-weight: 400;
+    }
+  }
+}
+
+#video {
+  z-index: 150;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 12px;
+  }
+  .player {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    iframe {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+button {
+  border:none;
+  background-color: transparent;
+  -webkit-appearance:none;
+  outline: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-size: 160px 80px;
+  background-image: url("../images/buttonssprite.png");
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    background-image: url("../images/buttonssprite@2x.png");
+  }
+  &.play {
+    background-position: 0px 0px;
+    &:hover, &:active {
+      background-position: 0px 40px;
+    }
+  }
+  &.info {
+    background-position: 120px 0px;
+    &:hover, &:active {
+      background-position: 120px 40px;
+    }
+  }
+  &.info.active {
+    background-position: 80px 0px;
+    &:hover, &:active {
+      background-position: 80px 40px;
+    }
+  }
+  &.close {
+    background-position: 40px 0px;
+    &:hover, &:active {
+      background-position: 40px 40px;
+    }
+  }
+}
