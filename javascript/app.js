@@ -121,7 +121,7 @@ function initThirdDimension() {
   });
 
   // Create 25 objects that can be Bricks or OSB Planes
-  for (i=0; i<25; i++) {
+  for (var i=0; i<25; i++) {
     var mesh, name, mat, obj;
     var x = getRandom('width');
     var y = getRandom('height');
@@ -207,7 +207,7 @@ function animateThirdDimension() {
 
   requestAnimationFrame( animateThirdDimension );
 
-  for(i = 0; i < scene.children.length; i++) {
+  for(var i = 0; i < scene.children.length; i++) {
     var child = scene.children[i];
     if (child.type == 'Mesh') {
       child.rotation.x += 0.002;
